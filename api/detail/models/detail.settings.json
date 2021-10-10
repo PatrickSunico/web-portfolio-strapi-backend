@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "details",
+  "info": {
+    "name": "Detail",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "design_skills": {
+      "type": "component",
+      "repeatable": true,
+      "component": "design.skill",
+      "required": true
+    },
+    "development_skills": {
+      "type": "component",
+      "repeatable": true,
+      "component": "development.development"
+    },
+    "about_description": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

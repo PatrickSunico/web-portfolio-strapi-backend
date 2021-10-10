@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_development_developments",
+  "info": {
+    "name": "skill",
+    "icon": "code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "skill": {
+      "type": "string"
+    }
+  }
+}
