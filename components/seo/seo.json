@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_seo_seos",
+  "info": {
+    "name": "SEO",
+    "icon": "tachometer-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "MetaTitle": {
+      "type": "string",
+      "required": true
+    },
+    "MetaDescription": {
+      "type": "richtext"
+    },
+    "MetaContentType": {
+      "type": "string",
+      "required": true,
+      "default": "Content-Type"
+    },
+    "ViewPort": {
+      "type": "string",
+      "required": true,
+      "default": "width-device-width, intitial-scale=1"
+    }
+  }
+}

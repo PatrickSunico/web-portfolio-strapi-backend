@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_project_categories_project_categories",
+  "info": {
+    "name": "ProjectCategories",
+    "icon": "allergies",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "ProjectCategory": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

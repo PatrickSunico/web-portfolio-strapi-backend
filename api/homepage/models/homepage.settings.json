@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "homepages",
   "info": {
-    "name": "homepage"
+    "name": "homepage",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -11,17 +12,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "headline": {
-      "type": "string",
-      "required": true
-    },
-    "description": {
-      "type": "richtext",
-      "required": true
-    },
     "slug": {
-      "type": "uid",
-      "targetField": "headline"
+      "type": "uid"
     }
   }
 }

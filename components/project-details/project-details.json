@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_project_details_project_details",
+  "info": {
+    "name": "ProjectDetails",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "ProjectCategories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project-categories.project-categories",
+      "required": true
+    },
+    "ProjectTools": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project-tools.project-tools",
+      "required": true
+    },
+    "SocialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "social-links.social-links",
+      "required": true
+    }
+  }
+}

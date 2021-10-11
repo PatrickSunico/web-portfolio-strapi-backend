@@ -312,18 +312,10 @@
     "schemas": {
       "Homepage": {
         "required": [
-          "id",
-          "headline",
-          "description"
+          "id"
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "headline": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "slug": {
@@ -336,17 +328,7 @@
         }
       },
       "NewHomepage": {
-        "required": [
-          "headline",
-          "description"
-        ],
         "properties": {
-          "headline": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
           "slug": {
             "type": "uid"
           },

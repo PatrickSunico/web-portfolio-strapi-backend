@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_social_links_social_links",
+  "info": {
+    "name": "SocialLinks",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "socialLink": {
+      "type": "string",
+      "required": true
+    },
+    "AvailableLinks": {
+      "type": "enumeration",
+      "enum": [
+        "Behance",
+        "Web",
+        "Android",
+        "iOS"
+      ],
+      "required": true,
+      "default": "Behance"
+    }
+  }
+}

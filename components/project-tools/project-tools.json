@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_project_tools_project_tools",
+  "info": {
+    "name": "ProjectTools",
+    "icon": "tools"
+  },
+  "options": {},
+  "attributes": {
+    "tool": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

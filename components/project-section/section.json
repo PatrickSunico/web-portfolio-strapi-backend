@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_section_sections",
+  "info": {
+    "name": "Section",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "HeadingTitle": {
+      "type": "string",
+      "required": true
+    },
+    "SectionDescription": {
+      "type": "richtext",
+      "required": true
+    },
+    "SectionImage": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}
