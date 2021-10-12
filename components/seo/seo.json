@@ -7,19 +7,19 @@
   },
   "options": {},
   "attributes": {
-    "MetaTitle": {
+    "metaTitle": {
       "type": "string",
       "required": true
     },
-    "MetaDescription": {
+    "metaDescription": {
       "type": "richtext"
     },
-    "MetaContentType": {
+    "metaContentType": {
       "type": "string",
       "required": true,
       "default": "Content-Type"
     },
-    "ViewPort": {
+    "viewPort": {
       "type": "string",
       "required": true,
       "default": "width-device-width, intitial-scale=1"

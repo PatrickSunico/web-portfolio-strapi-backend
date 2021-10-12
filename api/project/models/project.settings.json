@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "SectionField": {
+    "sectionField": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -28,7 +28,7 @@
       ],
       "required": true
     },
-    "ProjectDetails": {
+    "projectDetails": {
       "type": "component",
       "repeatable": false,
       "pluginOptions": {
@@ -39,7 +39,7 @@
       "component": "project-details.project-details",
       "required": true
     },
-    "ProjectTitle": {
+    "projectTitle": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -55,10 +55,10 @@
         }
       },
       "type": "uid",
-      "targetField": "ProjectTitle",
-      "required": true
+      "required": true,
+      "targetField": "projectTitle"
     },
-    "ProjectType": {
+    "projectType": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -72,7 +72,7 @@
       "required": true,
       "default": "Web"
     },
-    "SEO": {
+    "seo": {
       "type": "component",
       "repeatable": false,
       "pluginOptions": {

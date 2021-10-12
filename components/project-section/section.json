@@ -7,15 +7,15 @@
   },
   "options": {},
   "attributes": {
-    "HeadingTitle": {
+    "headingTitle": {
       "type": "string",
       "required": true
     },
-    "SectionDescription": {
+    "sectionDescription": {
       "type": "richtext",
       "required": true
     },
-    "SectionImage": {
+    "sectionImage": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [

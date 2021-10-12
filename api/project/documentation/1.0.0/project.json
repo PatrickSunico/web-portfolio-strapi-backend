@@ -517,17 +517,17 @@
       "Project": {
         "required": [
           "id",
-          "SectionField",
-          "ProjectDetails",
-          "ProjectTitle",
+          "sectionField",
+          "projectDetails",
+          "projectTitle",
           "slug",
-          "ProjectType"
+          "projectType"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "SectionField": {
+          "sectionField": {
             "type": "array",
             "items": {
               "oneOf": [
@@ -542,13 +542,13 @@
                     "id": {
                       "type": "string"
                     },
-                    "HeadingTitle": {
+                    "headingTitle": {
                       "type": "string"
                     },
-                    "SectionDescription": {
+                    "sectionDescription": {
                       "type": "string"
                     },
-                    "SectionImage": {
+                    "sectionImage": {
                       "type": "array",
                       "items": {
                         "required": [
@@ -621,45 +621,45 @@
                   },
                   "required": [
                     "id",
-                    "HeadingTitle",
-                    "SectionDescription",
-                    "SectionImage"
+                    "headingTitle",
+                    "sectionDescription",
+                    "sectionImage"
                   ]
                 }
               ]
             }
           },
-          "ProjectDetails": {
+          "projectDetails": {
             "type": "object",
             "required": [
               "id",
-              "ProjectCategories",
-              "ProjectTools",
-              "SocialLinks"
+              "projectCategories",
+              "projectTools",
+              "socialLinks"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "ProjectCategories": {
+              "projectCategories": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "required": [
                     "id",
-                    "ProjectCategory"
+                    "projectCategory"
                   ],
                   "properties": {
                     "id": {
                       "type": "string"
                     },
-                    "ProjectCategory": {
+                    "projectCategory": {
                       "type": "string"
                     }
                   }
                 }
               },
-              "ProjectTools": {
+              "projectTools": {
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -677,14 +677,14 @@
                   }
                 }
               },
-              "SocialLinks": {
+              "socialLinks": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "required": [
                     "id",
                     "socialLink",
-                    "AvailableLinks"
+                    "availableLinks"
                   ],
                   "properties": {
                     "id": {
@@ -693,7 +693,7 @@
                     "socialLink": {
                       "type": "string"
                     },
-                    "AvailableLinks": {
+                    "availableLinks": {
                       "type": "string",
                       "default": "Behance",
                       "enum": [
@@ -708,13 +708,13 @@
               }
             }
           },
-          "ProjectTitle": {
+          "projectTitle": {
             "type": "string"
           },
           "slug": {
             "type": "uid"
           },
-          "ProjectType": {
+          "projectType": {
             "type": "string",
             "default": "Web",
             "enum": [
@@ -722,29 +722,29 @@
               "Mobile"
             ]
           },
-          "SEO": {
+          "seo": {
             "type": "object",
             "required": [
               "id",
-              "MetaTitle",
-              "MetaContentType",
-              "ViewPort"
+              "metaTitle",
+              "metaContentType",
+              "viewPort"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "MetaTitle": {
+              "metaTitle": {
                 "type": "string"
               },
-              "MetaDescription": {
+              "metaDescription": {
                 "type": "string"
               },
-              "MetaContentType": {
+              "metaContentType": {
                 "type": "string",
                 "default": "Content-Type"
               },
-              "ViewPort": {
+              "viewPort": {
                 "type": "string",
                 "default": "width-device-width, intitial-scale=1"
               }
@@ -755,36 +755,36 @@
             "items": {
               "required": [
                 "id",
-                "SectionField",
-                "ProjectDetails",
-                "ProjectTitle",
+                "sectionField",
+                "projectDetails",
+                "projectTitle",
                 "slug",
-                "ProjectType"
+                "projectType"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "SectionField": {
+                "sectionField": {
                   "type": "dynamiczone"
                 },
-                "ProjectDetails": {
+                "projectDetails": {
                   "type": "component"
                 },
-                "ProjectTitle": {
+                "projectTitle": {
                   "type": "string"
                 },
                 "slug": {
                   "type": "uid"
                 },
-                "ProjectType": {
+                "projectType": {
                   "type": "string",
                   "enum": [
                     "Web",
                     "Mobile"
                   ]
                 },
-                "SEO": {
+                "seo": {
                   "type": "component"
                 },
                 "localizations": {
@@ -819,14 +819,14 @@
       },
       "NewProject": {
         "required": [
-          "SectionField",
-          "ProjectDetails",
-          "ProjectTitle",
+          "sectionField",
+          "projectDetails",
+          "projectTitle",
           "slug",
-          "ProjectType"
+          "projectType"
         ],
         "properties": {
-          "SectionField": {
+          "sectionField": {
             "type": "array",
             "items": {
               "oneOf": [
@@ -841,13 +841,13 @@
                     "id": {
                       "type": "string"
                     },
-                    "HeadingTitle": {
+                    "headingTitle": {
                       "type": "string"
                     },
-                    "SectionDescription": {
+                    "sectionDescription": {
                       "type": "string"
                     },
-                    "SectionImage": {
+                    "sectionImage": {
                       "type": "array",
                       "items": {
                         "required": [
@@ -920,45 +920,45 @@
                   },
                   "required": [
                     "id",
-                    "HeadingTitle",
-                    "SectionDescription",
-                    "SectionImage"
+                    "headingTitle",
+                    "sectionDescription",
+                    "sectionImage"
                   ]
                 }
               ]
             }
           },
-          "ProjectDetails": {
+          "projectDetails": {
             "type": "object",
             "required": [
               "id",
-              "ProjectCategories",
-              "ProjectTools",
-              "SocialLinks"
+              "projectCategories",
+              "projectTools",
+              "socialLinks"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "ProjectCategories": {
+              "projectCategories": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "required": [
                     "id",
-                    "ProjectCategory"
+                    "projectCategory"
                   ],
                   "properties": {
                     "id": {
                       "type": "string"
                     },
-                    "ProjectCategory": {
+                    "projectCategory": {
                       "type": "string"
                     }
                   }
                 }
               },
-              "ProjectTools": {
+              "projectTools": {
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -976,14 +976,14 @@
                   }
                 }
               },
-              "SocialLinks": {
+              "socialLinks": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "required": [
                     "id",
                     "socialLink",
-                    "AvailableLinks"
+                    "availableLinks"
                   ],
                   "properties": {
                     "id": {
@@ -992,7 +992,7 @@
                     "socialLink": {
                       "type": "string"
                     },
-                    "AvailableLinks": {
+                    "availableLinks": {
                       "type": "string",
                       "default": "Behance",
                       "enum": [
@@ -1007,13 +1007,13 @@
               }
             }
           },
-          "ProjectTitle": {
+          "projectTitle": {
             "type": "string"
           },
           "slug": {
             "type": "uid"
           },
-          "ProjectType": {
+          "projectType": {
             "type": "string",
             "default": "Web",
             "enum": [
@@ -1021,29 +1021,29 @@
               "Mobile"
             ]
           },
-          "SEO": {
+          "seo": {
             "type": "object",
             "required": [
               "id",
-              "MetaTitle",
-              "MetaContentType",
-              "ViewPort"
+              "metaTitle",
+              "metaContentType",
+              "viewPort"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "MetaTitle": {
+              "metaTitle": {
                 "type": "string"
               },
-              "MetaDescription": {
+              "metaDescription": {
                 "type": "string"
               },
-              "MetaContentType": {
+              "metaContentType": {
                 "type": "string",
                 "default": "Content-Type"
               },
-              "ViewPort": {
+              "viewPort": {
                 "type": "string",
                 "default": "width-device-width, intitial-scale=1"
               }

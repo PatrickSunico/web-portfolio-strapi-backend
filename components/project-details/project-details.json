@@ -7,19 +7,19 @@
   },
   "options": {},
   "attributes": {
-    "ProjectCategories": {
+    "projectCategories": {
       "type": "component",
       "repeatable": true,
       "component": "project-categories.project-categories",
       "required": true
     },
-    "ProjectTools": {
+    "projectTools": {
       "type": "component",
       "repeatable": true,
       "component": "project-tools.project-tools",
       "required": true
     },
-    "SocialLinks": {
+    "socialLinks": {
       "type": "component",
       "repeatable": true,
       "component": "social-links.social-links",

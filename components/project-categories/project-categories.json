@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "ProjectCategory": {
+    "projectCategory": {
       "type": "string",
       "required": true
     }
