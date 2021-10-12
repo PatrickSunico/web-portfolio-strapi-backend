@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_about_section_about_sections",
+  "info": {
+    "name": "AboutSection",
+    "icon": "archway",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "AboutDescription": {
+      "type": "richtext",
+      "required": true
+    },
+    "DesignSkills": {
+      "type": "component",
+      "repeatable": true,
+      "component": "design.skill",
+      "required": true
+    },
+    "DevelopmentSkills": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "development.development"
+    }
+  }
+}

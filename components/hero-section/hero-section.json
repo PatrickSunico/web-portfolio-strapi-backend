@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_hero_section_hero_sections",
+  "info": {
+    "name": "HeroSection",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "secondary_headline": {
+      "type": "string",
+      "required": true
+    },
+    "caption": {
+      "type": "richtext",
+      "required": true
+    },
+    "resume": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "github_link": {
+      "type": "string",
+      "required": true
+    },
+    "linkedin_link": {
+      "type": "string",
+      "required": true
+    },
+    "behance_link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

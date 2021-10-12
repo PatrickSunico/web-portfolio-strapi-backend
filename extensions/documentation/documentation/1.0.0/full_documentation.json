@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/12/2021 10:14:54 AM"
+    "x-generation-date": "10/12/2021 11:44:28 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -45,19 +45,19 @@
     }
   ],
   "paths": {
-    "/details": {
+    "/about": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the about's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve about document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Detail"
+                    "$ref": "#/components/schemas/About"
                   }
                 }
               }
@@ -96,7 +96,7 @@
         },
         "summary": "",
         "tags": [
-          "Detail"
+          "About"
         ],
         "parameters": [
           {
@@ -237,198 +237,16 @@
           }
         ]
       },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Detail"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Detail"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewDetail"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/details/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "count": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Detail"
-        ],
-        "parameters": []
-      }
-    },
-    "/details/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Detail"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Detail"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single about record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve about document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Detail"
+                  "$ref": "#/components/schemas/About"
                 }
               }
             }
@@ -466,7 +284,7 @@
         },
         "summary": "",
         "tags": [
-          "Detail"
+          "About"
         ],
         "requestBody": {
           "description": "",
@@ -474,30 +292,19 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDetail"
+                "$ref": "#/components/schemas/NewAbout"
               }
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
+        "parameters": []
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single about record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single about based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -540,20 +347,9 @@
         },
         "summary": "",
         "tags": [
-          "Detail"
+          "About"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
+        "parameters": []
       }
     },
     "/experiences": {
@@ -1067,20 +863,19 @@
         ]
       }
     },
-    "/hero-details": {
+    "/hero": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the hero's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve hero document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Hero"
                   }
                 }
               }
@@ -1119,7 +914,314 @@
         },
         "summary": "",
         "tags": [
-          "Hero-detail"
+          "Hero"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single hero record",
+        "responses": {
+          "200": {
+            "description": "Retrieve hero document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hero"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Hero"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewHero"
+              }
+            }
+          }
+        },
+        "parameters": []
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single hero record",
+        "responses": {
+          "200": {
+            "description": "deletes a single hero based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Hero"
+        ],
+        "parameters": []
+      }
+    },
+    "/portfolios": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Portfolio"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Portfolio"
         ],
         "parameters": [
           {
@@ -1269,11 +1371,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Portfolio"
                 }
               }
             }
@@ -1311,7 +1409,7 @@
         },
         "summary": "",
         "tags": [
-          "Hero-detail"
+          "Portfolio"
         ],
         "requestBody": {
           "description": "",
@@ -1319,840 +1417,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewHero-detail"
+                "$ref": "#/components/schemas/NewPortfolio"
               }
             }
           }
         }
       }
     },
-    "/hero-details/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Hero-detail"
-        ],
-        "parameters": []
-      }
-    },
-    "/hero-details/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Hero-detail"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Hero-detail"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewHero-detail"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a record",
-        "responses": {
-          "200": {
-            "description": "deletes a single record based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Hero-detail"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/homepage": {
-      "get": {
-        "deprecated": false,
-        "description": "Find all the homepage's records",
-        "responses": {
-          "200": {
-            "description": "Retrieve homepage document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Homepage"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Homepage"
-        ],
-        "parameters": [
-          {
-            "name": "_limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of results possible",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_sort",
-            "in": "query",
-            "required": false,
-            "description": "Sort according to a specific field.",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_start",
-            "in": "query",
-            "required": false,
-            "description": "Skip a specific number of entries (especially useful for pagination)",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "=",
-            "in": "query",
-            "required": false,
-            "description": "Get entries that matches exactly your input",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_ne",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are not equals to something",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lt",
-            "in": "query",
-            "required": false,
-            "description": "Get record that are lower than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are lower than or equal to a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gt",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than  or equal a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_contains",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_containss",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains (case sensitive) a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_in",
-            "in": "query",
-            "required": false,
-            "description": "Get records that matches any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_nin",
-            "in": "query",
-            "required": false,
-            "description": "Get records that doesn't match any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a single homepage record",
-        "responses": {
-          "200": {
-            "description": "Retrieve homepage document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Homepage"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Homepage"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewHomepage"
-              }
-            }
-          }
-        },
-        "parameters": []
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a single homepage record",
-        "responses": {
-          "200": {
-            "description": "deletes a single homepage based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Homepage"
-        ],
-        "parameters": []
-      }
-    },
-    "/projects": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Project"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Project"
-        ],
-        "parameters": [
-          {
-            "name": "_limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of results possible",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_sort",
-            "in": "query",
-            "required": false,
-            "description": "Sort according to a specific field.",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_start",
-            "in": "query",
-            "required": false,
-            "description": "Skip a specific number of entries (especially useful for pagination)",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "=",
-            "in": "query",
-            "required": false,
-            "description": "Get entries that matches exactly your input",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_ne",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are not equals to something",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lt",
-            "in": "query",
-            "required": false,
-            "description": "Get record that are lower than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are lower than or equal to a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gt",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than  or equal a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_contains",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_containss",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains (case sensitive) a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_in",
-            "in": "query",
-            "required": false,
-            "description": "Get records that matches any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_nin",
-            "in": "query",
-            "required": false,
-            "description": "Get records that doesn't match any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          }
-        ]
-      },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Project"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Project"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewProject"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/projects/count": {
+    "/portfolios/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -2204,12 +1476,12 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Portfolio"
         ],
         "parameters": []
       }
     },
-    "/projects/{id}": {
+    "/portfolios/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -2219,7 +1491,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Portfolio"
                 }
               }
             }
@@ -2257,7 +1529,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Portfolio"
         ],
         "parameters": [
           {
@@ -2281,7 +1553,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Portfolio"
                 }
               }
             }
@@ -2319,7 +1591,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Portfolio"
         ],
         "requestBody": {
           "description": "",
@@ -2327,7 +1599,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewPortfolio"
               }
             }
           }
@@ -2393,7 +1665,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Portfolio"
         ],
         "parameters": [
           {
@@ -4638,53 +3910,66 @@
   },
   "components": {
     "schemas": {
-      "Detail": {
+      "About": {
         "required": [
           "id",
-          "design_skills",
-          "about_description"
+          "AboutSection"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "design_skills": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "skill"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "skill": {
-                  "type": "string"
+          "AboutSection": {
+            "type": "object",
+            "required": [
+              "id",
+              "AboutDescription",
+              "DesignSkills",
+              "DevelopmentSkills"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "AboutDescription": {
+                "type": "string"
+              },
+              "DesignSkills": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "skill"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "skill": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "DevelopmentSkills": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "skill": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
-          },
-          "development_skills": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "skill": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "about_description": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -4692,49 +3977,62 @@
           }
         }
       },
-      "NewDetail": {
+      "NewAbout": {
         "required": [
-          "design_skills",
-          "about_description"
+          "AboutSection"
         ],
         "properties": {
-          "design_skills": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "skill"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "skill": {
-                  "type": "string"
+          "AboutSection": {
+            "type": "object",
+            "required": [
+              "id",
+              "AboutDescription",
+              "DesignSkills",
+              "DevelopmentSkills"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "AboutDescription": {
+                "type": "string"
+              },
+              "DesignSkills": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "skill"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "skill": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "DevelopmentSkills": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "skill": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
-          },
-          "development_skills": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "skill": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "about_description": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -4927,158 +4225,382 @@
           }
         }
       },
-      "Hero-detail": {
+      "Hero": {
         "required": [
           "id",
-          "headline_title",
-          "headline_caption"
+          "HeroSection"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "headline_title": {
+          "HeroSection": {
+            "type": "object",
+            "required": [
+              "id",
+              "headline",
+              "secondary_headline",
+              "caption",
+              "resume",
+              "github_link",
+              "linkedin_link",
+              "behance_link"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "headline": {
+                "type": "string"
+              },
+              "secondary_headline": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "resume": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              },
+              "github_link": {
+                "type": "string"
+              },
+              "linkedin_link": {
+                "type": "string"
+              },
+              "behance_link": {
+                "type": "string"
+              }
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewHero": {
+        "required": [
+          "HeroSection"
+        ],
+        "properties": {
+          "HeroSection": {
+            "type": "object",
+            "required": [
+              "id",
+              "headline",
+              "secondary_headline",
+              "caption",
+              "resume",
+              "github_link",
+              "linkedin_link",
+              "behance_link"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "headline": {
+                "type": "string"
+              },
+              "secondary_headline": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "resume": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              },
+              "github_link": {
+                "type": "string"
+              },
+              "linkedin_link": {
+                "type": "string"
+              },
+              "behance_link": {
+                "type": "string"
+              }
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
             "type": "string"
           },
-          "headline_caption": {
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Portfolio": {
+        "required": [
+          "id",
+          "projectTitle",
+          "slug",
+          "projectType",
+          "projectDetails",
+          "SEO",
+          "sectionField"
+        ],
+        "properties": {
+          "id": {
             "type": "string"
           },
-          "headline_description": {
+          "projectTitle": {
             "type": "string"
           },
-          "localizations": {
+          "slug": {
+            "type": "uid"
+          },
+          "projectType": {
+            "type": "string",
+            "default": "Web",
+            "enum": [
+              "Web",
+              "Mobile"
+            ]
+          },
+          "projectDetails": {
+            "type": "object",
+            "required": [
+              "id",
+              "projectCategories",
+              "projectTools",
+              "socialLinks"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "projectCategories": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "projectCategory"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "projectCategory": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "projectTools": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "tool"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "tool": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "socialLinks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "socialLink",
+                    "availableLinks"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "socialLink": {
+                      "type": "string"
+                    },
+                    "availableLinks": {
+                      "type": "string",
+                      "default": "Behance",
+                      "enum": [
+                        "Behance",
+                        "Web",
+                        "Android",
+                        "iOS",
+                        "Github"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "SEO": {
             "type": "array",
             "items": {
+              "type": "object",
               "required": [
                 "id",
-                "headline_title",
-                "headline_caption"
+                "metaTitle",
+                "metaContentType",
+                "viewPort"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "headline_title": {
+                "metaTitle": {
                   "type": "string"
                 },
-                "headline_caption": {
+                "metaDescription": {
                   "type": "string"
                 },
-                "headline_description": {
-                  "type": "string"
+                "metaContentType": {
+                  "type": "string",
+                  "default": "Content-Type"
                 },
-                "localizations": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "locale": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
+                "viewPort": {
+                  "type": "string",
+                  "default": "width-device-width, intitial-scale=1"
                 }
               }
             }
-          },
-          "locale": {
-            "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "NewHero-detail": {
-        "required": [
-          "headline_title",
-          "headline_caption"
-        ],
-        "properties": {
-          "headline_title": {
-            "type": "string"
-          },
-          "headline_caption": {
-            "type": "string"
-          },
-          "headline_description": {
-            "type": "string"
-          },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "locale": {
-            "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "created_by": {
-            "type": "string"
-          },
-          "updated_by": {
-            "type": "string"
-          }
-        }
-      },
-      "Homepage": {
-        "required": [
-          "id"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "uid"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "NewHomepage": {
-        "properties": {
-          "slug": {
-            "type": "uid"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "created_by": {
-            "type": "string"
-          },
-          "updated_by": {
-            "type": "string"
-          }
-        }
-      },
-      "Project": {
-        "required": [
-          "id",
-          "sectionField",
-          "projectDetails",
-          "projectTitle",
-          "slug",
-          "projectType"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
           },
           "sectionField": {
             "type": "array",
@@ -5182,147 +4704,21 @@
               ]
             }
           },
-          "projectDetails": {
-            "type": "object",
-            "required": [
-              "id",
-              "projectCategories",
-              "projectTools",
-              "socialLinks"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "projectCategories": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "projectCategory"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "projectCategory": {
-                      "type": "string"
-                    }
-                  }
-                }
-              },
-              "projectTools": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "tool"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "tool": {
-                      "type": "string"
-                    }
-                  }
-                }
-              },
-              "socialLinks": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "socialLink",
-                    "availableLinks"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "socialLink": {
-                      "type": "string"
-                    },
-                    "availableLinks": {
-                      "type": "string",
-                      "default": "Behance",
-                      "enum": [
-                        "Behance",
-                        "Web",
-                        "Android",
-                        "iOS"
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "projectTitle": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "uid"
-          },
-          "projectType": {
-            "type": "string",
-            "default": "Web",
-            "enum": [
-              "Web",
-              "Mobile"
-            ]
-          },
-          "seo": {
-            "type": "object",
-            "required": [
-              "id",
-              "metaTitle",
-              "metaContentType",
-              "viewPort"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "metaTitle": {
-                "type": "string"
-              },
-              "metaDescription": {
-                "type": "string"
-              },
-              "metaContentType": {
-                "type": "string",
-                "default": "Content-Type"
-              },
-              "viewPort": {
-                "type": "string",
-                "default": "width-device-width, intitial-scale=1"
-              }
-            }
-          },
           "localizations": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "sectionField",
-                "projectDetails",
                 "projectTitle",
                 "slug",
-                "projectType"
+                "projectType",
+                "projectDetails",
+                "SEO",
+                "sectionField"
               ],
               "properties": {
                 "id": {
                   "type": "string"
-                },
-                "sectionField": {
-                  "type": "dynamiczone"
-                },
-                "projectDetails": {
-                  "type": "component"
                 },
                 "projectTitle": {
                   "type": "string"
@@ -5337,8 +4733,14 @@
                     "Mobile"
                   ]
                 },
-                "seo": {
+                "projectDetails": {
                   "type": "component"
+                },
+                "SEO": {
+                  "type": "component"
+                },
+                "sectionField": {
+                  "type": "dynamiczone"
                 },
                 "localizations": {
                   "type": "array",
@@ -5347,9 +4749,6 @@
                   }
                 },
                 "locale": {
-                  "type": "string"
-                },
-                "published_at": {
                   "type": "string"
                 },
                 "created_by": {
@@ -5363,22 +4762,144 @@
           },
           "locale": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
-      "NewProject": {
+      "NewPortfolio": {
         "required": [
-          "sectionField",
-          "projectDetails",
           "projectTitle",
           "slug",
-          "projectType"
+          "projectType",
+          "projectDetails",
+          "SEO",
+          "sectionField"
         ],
         "properties": {
+          "projectTitle": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "uid"
+          },
+          "projectType": {
+            "type": "string",
+            "default": "Web",
+            "enum": [
+              "Web",
+              "Mobile"
+            ]
+          },
+          "projectDetails": {
+            "type": "object",
+            "required": [
+              "id",
+              "projectCategories",
+              "projectTools",
+              "socialLinks"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "projectCategories": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "projectCategory"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "projectCategory": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "projectTools": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "tool"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "tool": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "socialLinks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "socialLink",
+                    "availableLinks"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "socialLink": {
+                      "type": "string"
+                    },
+                    "availableLinks": {
+                      "type": "string",
+                      "default": "Behance",
+                      "enum": [
+                        "Behance",
+                        "Web",
+                        "Android",
+                        "iOS",
+                        "Github"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "SEO": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "metaTitle",
+                "metaContentType",
+                "viewPort"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "metaTitle": {
+                  "type": "string"
+                },
+                "metaDescription": {
+                  "type": "string"
+                },
+                "metaContentType": {
+                  "type": "string",
+                  "default": "Content-Type"
+                },
+                "viewPort": {
+                  "type": "string",
+                  "default": "width-device-width, intitial-scale=1"
+                }
+              }
+            }
+          },
           "sectionField": {
             "type": "array",
             "items": {
@@ -5481,127 +5002,6 @@
               ]
             }
           },
-          "projectDetails": {
-            "type": "object",
-            "required": [
-              "id",
-              "projectCategories",
-              "projectTools",
-              "socialLinks"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "projectCategories": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "projectCategory"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "projectCategory": {
-                      "type": "string"
-                    }
-                  }
-                }
-              },
-              "projectTools": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "tool"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "tool": {
-                      "type": "string"
-                    }
-                  }
-                }
-              },
-              "socialLinks": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "socialLink",
-                    "availableLinks"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "socialLink": {
-                      "type": "string"
-                    },
-                    "availableLinks": {
-                      "type": "string",
-                      "default": "Behance",
-                      "enum": [
-                        "Behance",
-                        "Web",
-                        "Android",
-                        "iOS"
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "projectTitle": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "uid"
-          },
-          "projectType": {
-            "type": "string",
-            "default": "Web",
-            "enum": [
-              "Web",
-              "Mobile"
-            ]
-          },
-          "seo": {
-            "type": "object",
-            "required": [
-              "id",
-              "metaTitle",
-              "metaContentType",
-              "viewPort"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "metaTitle": {
-                "type": "string"
-              },
-              "metaDescription": {
-                "type": "string"
-              },
-              "metaContentType": {
-                "type": "string",
-                "default": "Content-Type"
-              },
-              "viewPort": {
-                "type": "string",
-                "default": "width-device-width, intitial-scale=1"
-              }
-            }
-          },
           "localizations": {
             "type": "array",
             "items": {
@@ -5610,10 +5010,6 @@
           },
           "locale": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -5910,16 +5306,16 @@
   },
   "tags": [
     {
-      "name": "Detail"
+      "name": "About"
     },
     {
       "name": "Experience"
     },
     {
-      "name": "Homepage"
+      "name": "Hero"
     },
     {
-      "name": "Project"
+      "name": "Portfolio"
     },
     {
       "name": "Email - Email"
