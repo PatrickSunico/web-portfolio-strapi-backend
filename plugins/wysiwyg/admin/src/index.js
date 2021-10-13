@@ -11,6 +11,7 @@ export default (strapi) => {
     blockerComponentProps: {},
     description: pluginDescription,
     icon: pluginPkg.strapi.icon,
+
     id: pluginId,
     initializer: () => null,
     injectedComponents: [],
