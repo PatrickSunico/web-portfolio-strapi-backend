@@ -46,6 +46,17 @@
       },
       "required": true,
       "component": "social-links.social-links"
+    },
+    "ProjectTools": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "project-tools.project-tools",
+      "required": true
     }
   }
 }

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/15/2021 10:02:12 PM"
+    "x-generation-date": "10/15/2021 10:37:49 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4992,7 +4992,8 @@
           "id",
           "ProjectTitle",
           "ProjectCategory",
-          "SocialLink"
+          "SocialLink",
+          "ProjectTools"
         ],
         "properties": {
           "id": {
@@ -5049,6 +5050,24 @@
               }
             }
           },
+          "ProjectTools": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "tool"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "tool": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "localizations": {
             "type": "array",
             "items": {
@@ -5056,7 +5075,8 @@
                 "id",
                 "ProjectTitle",
                 "ProjectCategory",
-                "SocialLink"
+                "SocialLink",
+                "ProjectTools"
               ],
               "properties": {
                 "id": {
@@ -5069,6 +5089,9 @@
                   "type": "component"
                 },
                 "SocialLink": {
+                  "type": "component"
+                },
+                "ProjectTools": {
                   "type": "component"
                 },
                 "localizations": {
@@ -5105,7 +5128,8 @@
         "required": [
           "ProjectTitle",
           "ProjectCategory",
-          "SocialLink"
+          "SocialLink",
+          "ProjectTools"
         ],
         "properties": {
           "ProjectTitle": {
@@ -5155,6 +5179,24 @@
                     "iOS",
                     "Github"
                   ]
+                }
+              }
+            }
+          },
+          "ProjectTools": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "tool"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "tool": {
+                  "type": "string"
                 }
               }
             }

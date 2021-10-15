@@ -532,7 +532,8 @@
           "id",
           "ProjectTitle",
           "ProjectCategory",
-          "SocialLink"
+          "SocialLink",
+          "ProjectTools"
         ],
         "properties": {
           "id": {
@@ -589,6 +590,24 @@
               }
             }
           },
+          "ProjectTools": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "tool"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "tool": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "localizations": {
             "type": "array",
             "items": {
@@ -596,7 +615,8 @@
                 "id",
                 "ProjectTitle",
                 "ProjectCategory",
-                "SocialLink"
+                "SocialLink",
+                "ProjectTools"
               ],
               "properties": {
                 "id": {
@@ -609,6 +629,9 @@
                   "type": "component"
                 },
                 "SocialLink": {
+                  "type": "component"
+                },
+                "ProjectTools": {
                   "type": "component"
                 },
                 "localizations": {
@@ -645,7 +668,8 @@
         "required": [
           "ProjectTitle",
           "ProjectCategory",
-          "SocialLink"
+          "SocialLink",
+          "ProjectTools"
         ],
         "properties": {
           "ProjectTitle": {
@@ -695,6 +719,24 @@
                     "iOS",
                     "Github"
                   ]
+                }
+              }
+            }
+          },
+          "ProjectTools": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "tool"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "tool": {
+                  "type": "string"
                 }
               }
             }
