@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_menu_link_menu_links",
+  "info": {
+    "name": "MenuLink",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "MenuLabel": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
